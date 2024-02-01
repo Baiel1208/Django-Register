@@ -54,11 +54,11 @@ class UserProfileView(UpdateView):
         return reverse_lazy('profile', args=(self.object.id, ))
 
 
-    # def get_context_data(self, **kwargs):
-    #     context = super(UserProfileView, self).get_context_data()
-    #     context['title'] = 'Store - Профиль'
-    #     context['baskets'] = Basket.objects.filter(user=self.object)
-    #     return context
+    def get_context_data(self, **kwargs):
+        context = super(UserProfileView, self).get_context_data()
+        context['title'] = 'Store - Профиль'
+        # context['baskets'] = Basket.objects.filter(user=self.object)
+        return context
 
 
 class EmailVerificationView(TemplateView):
