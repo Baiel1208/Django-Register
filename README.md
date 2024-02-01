@@ -1,3 +1,5 @@
-# Course Store Template
+Registration via social networks on Django.
 
-Template for Django course
+Social network:
+
+GitHub
